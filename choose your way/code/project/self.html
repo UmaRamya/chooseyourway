@@ -1,0 +1,64 @@
+<html>
+<head>
+<title> selfdrive </title>
+
+<style>
+body {
+ 
+   background-image: url("bg6.jpg" );
+   background-size: 1400px 900px;
+   background-repeat: no-repeat;
+}
+</style>
+</head>
+ 
+<body>
+	<form action="self.php" method="post onsubmit="return slogin()">
+h1> <fieldset> <center> Register 
+<form><br> <br>
+<br> <br>
+
+<h1> you have choosen a car </h1>
+
+From where <input type="text" name="from">
+<br> <br>
+To where 
+<select name="area">
+	<option>    </option>
+<option > benz circle </option>
+<option> ntr circle </option>
+<option> besent road </option>
+<option> gurunanak colony </option>
+<option> satyamnarayana puram </option>
+<option> singinagar </option>
+</select>
+Time <input type="text" name="time">
+<br> <br>
+
+Date <input type="date" name="date">
+<br> <br>
+time of departure <input type="text" name="time1">
+<br> <br>
+<form action="submit.html">
+<input type="submit" name="book!">
+<br> <br>
+</form>
+</center> </fieldset>
+</form>
+</form>
+<script type="text/javascript">
+function slogin()
+{
+var from=document.forms[0].from.value;
+if(s=="")
+{
+alert("area not entered");
+//header('Location: studentregister.html');
+return false;
+}
+else
+return true;
+}
+</script>
+</body>
+<html>

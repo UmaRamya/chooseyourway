@@ -1,0 +1,118 @@
+<html>
+<head> 
+<title> sign </title>
+<style >
+
+body {
+ 
+   background-image: url("bg3.jpg" );
+   background-size: 1400px 900px;
+   background-repeat: no-repeat;
+}
+</style>
+</head>
+<body>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+ 
+<form action="register.php" method="post" onsubmit="return validate()">
+<fieldset> <center><h1> Register </h1>
+First name <input type="text" name="firstname" id="i1">
+<br><br>
+last name <input type="text" name="lastname" id="i2">
+<br><br>
+mobile number <input type="text" name="mobile" id="i3">
+<br><br>
+
+Email-id <input type="text" name="email" id="i4">
+
+<br><br>
+ create password <input type="password" name="password" id="i5">
+<br><br>
+
+<input type="submit" value="register" > 
+</fieldset> </center>
+</form>
+
+
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+ <script type="text/javascript">
+        function validate()
+        {
+			
+			
+			//alert("inside validate()");
+			
+		    var firstname=document.forms[0].firstname.value;
+		    var lastname=document.forms[0].lastname.value;
+		    var mobile=document.forms[0].mobile.value;
+		    var email=document.forms[0].email.value;
+		    var password=document.forms[0].password.value;
+		    
+		    
+		    var fnamereg=/^[a-zA-Z][a-zA-Z0-9_.]*$/;
+		    var lnamereg=/^[a-zA-Z][a-zA-Z0-9_.]*$/;
+		    var mobreg=/^[7|8|9][0-9]{9}$/;
+		    var emailreg=/^[a-zA-Z][a-zA-Z0-9_.]*@[a-zA-Z][a-zA-Z0-9_.]*.[a-zA-Z][a-zA-Z0-9_.]{2}.[a-zA-Z][a-zA-Z0-9_.]{2}$/;
+		   
+		   
+		   rfirstname=fnamereg.test(fname);
+		   rlastname=lnamereg.test(lname);
+		   rmobile=mobreg.test(mobile);
+		   remail=emailreg.test(email);
+		   
+		   
+		   
+		   
+		    if(rfirstname && rlastname && rmobile && remail && (password.length>5))
+		    {
+				alert ("all values are valid");
+				return true;
+			}
+			else
+			{
+			if(!rfirstname)
+			{
+				alert("firstname invalid");
+				document.forms[0].firstname.focus();
+			}
+			if(!rlastname)
+			{
+				alert("lastname invalid");
+				document.forms[0].lastname.focus();
+			
+		    }
+		if(!rmobile)
+		   {
+			alert("mobilenumber invalid");
+				document.forms[0].mobile.focus();
+			}
+			if(!remail)
+			{
+				alert("email invalid");
+				document.forms[0].email.focus();
+			
+		    }
+		if(!password.length<6)
+		   {
+			alert("password should be minimum 6 characters");
+				document.forms[0].password.focus();
+			}
+			
+		return false; 	
+		}
+			
+			
+		}	
+			
+        </script>
+</body>
+
+
+
+</html>

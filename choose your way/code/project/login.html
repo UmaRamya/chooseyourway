@@ -1,0 +1,46 @@
+<html>
+<head>
+<title> login page</title>
+<style>
+
+body {
+ 
+   background-image: url( "bg4.jpg" );
+   background-size: 1400px 900px;
+   background-repeat: no-repeat;
+}
+
+</style>
+</head>
+
+<body > 
+<form action="login.php" method="post" onsubmit="return Login()">
+<br> <br> <br><br> <br> <br><br>
+<fieldset>
+<center>
+<h1> login page </h1>
+<br> <br> <br>
+
+Mobile number <input type="text" name="mobile">
+<br> <br>
+
+<input type="submit" value="login">
+</fieldset>
+</center>
+</form>
+<script type="text/javascript">
+function Login()
+{
+var mobile=document.forms[0].mobile.value;
+if(mobile=="")
+{
+alert("please fill the fields.. it can not be empty");
+//header('Location: studentregister.html');
+return false;
+}
+else
+return true;
+}
+</script>
+</body>
+</html>
